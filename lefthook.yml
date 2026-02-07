@@ -1,3 +1,16 @@
+pre-commit:
+  parallel: true
+  commands:
+    oxlint:
+      glob: "*.{js,jsx,ts,tsx,mjs,cjs}"
+      run: pnpm exec oxlint {staged_files}
+    oxfmt:
+      glob: "*.{js,jsx,ts,tsx,mjs,cjs,json,jsonc}"
+      run: pnpm exec oxfmt --check {staged_files}
+    markdownlint:
+      glob: "*.md"
+      run: pnpm exec markdownlint-cli2 {staged_files}
+
 commit-msg:
   commands:
     commitlint:
