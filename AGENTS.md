@@ -10,9 +10,10 @@ GitHub Flowに従って開発を行う。詳細は `.claude/skills/dev-workflow/
 
 - 作業開始前に `main` ブランチの最新変更を `rebase` で取り込む（マージコミットを作らない）
 - ブランチ名は `feature/機能名` とする
-- コミットメッセージは1行で簡潔に書く
+- コミットメッセージは日本語で1行で簡潔に書く
 - PR前にコミットを整理する（不要な修正コミットは squash する）
 - PRは `.github/pull_request_template.md` に沿って作成する
+- 作業が完了したらPR作成まで行う
 
 ## スキル一覧
 
