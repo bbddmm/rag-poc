@@ -35,5 +35,8 @@ storybook-static/
 # Test
 coverage/
 
+# Serena
+.serena/
+
 # Misc
 *.log
