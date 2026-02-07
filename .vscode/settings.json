@@ -1,0 +1,51 @@
+{
+  // Editor
+  "editor.formatOnSave": true,
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.oxc": "explicit",
+    "source.organizeImports": "never"
+  },
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+  "editor.rulers": [80, 120],
+  "files.trimTrailingWhitespace": true,
+  "files.insertFinalNewline": true,
+  "files.eol": "\n",
+
+  // TypeScript
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "typescript.enablePromptUseWorkspaceTsdk": true,
+
+  // Markdown
+  "[markdown]": {
+    "editor.defaultFormatter": "DavidAnson.vscode-markdownlint",
+    "editor.wordWrap": "on"
+  },
+  "markdownlint.config": {
+    "extends": ".markdownlint-cli2.yaml"
+  },
+
+  // Git
+  "git.enableSmartCommit": true,
+  "git.confirmSync": false,
+  "git.autofetch": true,
+
+  // Files
+  "files.exclude": {
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.turbo": true
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/dist": true,
+    "**/.turbo": true,
+    "**/pnpm-lock.yaml": true
+  },
+
+  // Terminal
+  "terminal.integrated.defaultProfile.linux": "bash"
+}
