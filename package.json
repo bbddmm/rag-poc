@@ -6,13 +6,19 @@
     "dev": "turbo run dev",
     "lint": "turbo run lint",
     "lint:md": "markdownlint-cli2",
-    "lint:md:fix": "markdownlint-cli2 --fix"
+    "lint:md:fix": "markdownlint-cli2 --fix",
+    "lint:oxlint": "oxlint",
+    "lint:oxlint:fix": "oxlint --fix",
+    "fmt": "oxfmt --write .",
+    "fmt:check": "oxfmt --check ."
   },
   "packageManager": "pnpm@10.28.2",
   "devDependencies": {
     "@commitlint/cli": "^20.4.1",
     "@commitlint/config-conventional": "^20.4.1",
     "markdownlint-cli2": "^0.20.0",
+    "oxfmt": "^0.28.0",
+    "oxlint": "^1.43.0",
     "turbo": "^2.5.4"
   }
 }
