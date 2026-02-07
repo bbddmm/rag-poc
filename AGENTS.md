@@ -4,7 +4,7 @@
 
 ## 開発ワークフロー
 
-GitHub Flowに従って開発を行う。詳細は `.claude/skills/dev-workflow/SKILL.md` を参照。
+GitHub Flowに従って開発を行う。
 
 ### 基本ルール
 
