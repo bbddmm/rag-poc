@@ -1,0 +1,11 @@
+{
+  "recommendations": [
+    "oxc.oxc-vscode",
+    "editorconfig.editorconfig",
+    "DavidAnson.vscode-markdownlint",
+    "ms-azuretools.vscode-docker",
+    "eamodio.gitlens",
+    "GitHub.copilot",
+    "GitHub.copilot-chat"
+  ]
+}
