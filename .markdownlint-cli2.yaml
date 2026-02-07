@@ -6,6 +6,7 @@ globs:
 
 ignores:
   - "node_modules/**"
+  - ".claude/skills/skill-creator/**"
 
 # markdownlint rules
 # https://github.com/DavidAnson/markdownlint/blob/main/doc/Rules.md

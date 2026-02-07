@@ -1,0 +1,23 @@
+# AGENTS.md
+
+このリポジトリでAIエージェントが作業する際のガイドラインを定義する。
+
+## 開発ワークフロー
+
+GitHub Flowに従って開発を行う。詳細は `.claude/skills/dev-workflow/SKILL.md` を参照。
+
+### 基本ルール
+
+- 作業開始前に `main` ブランチの最新変更を `rebase` で取り込む（マージコミットを作らない）
+- ブランチ名は `feature/機能名` とする
+- コミットメッセージは1行で簡潔に書く
+- PR前にコミットを整理する（不要な修正コミットは squash する）
+- PRは `.github/pull_request_template.md` に沿って作成する
+
+## スキル一覧
+
+| スキル | 説明 | パス |
+| -------- | ---- | ---- |
+| dev-workflow | 開発時の作業ワークフロー | `.claude/skills/dev-workflow/` |
+| pr-creator | PRテンプレートに沿ったPR作成 | `.claude/skills/pr-creator/` |
+| skill-creator | スキルの作成・更新ガイド | `.claude/skills/skill-creator/` |
