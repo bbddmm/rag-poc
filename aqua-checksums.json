@@ -1,6 +1,36 @@
 {
   "checksums": [
     {
+      "id": "github_release/github.com/evilmartians/lefthook/v2.1.0/lefthook_2.1.0_Linux_aarch64.gz",
+      "checksum": "F8441D1C59937A9A7F153A0C873B37F6983A18E6704351E172C0F69EA5230109",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/evilmartians/lefthook/v2.1.0/lefthook_2.1.0_Linux_x86_64.gz",
+      "checksum": "2C5A385098DE3FE9A45EEA404EB6284FFCC537EC27556772CCC6BA31879B4FCA",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/evilmartians/lefthook/v2.1.0/lefthook_2.1.0_MacOS_arm64.gz",
+      "checksum": "02171A4CDF2F65B59FCB4A3C4EC1D802AA3E6FE4F49487B0C979C73B5A24B7D5",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/evilmartians/lefthook/v2.1.0/lefthook_2.1.0_MacOS_x86_64.gz",
+      "checksum": "443E09F52F2DC1D5A06887AC4DFBF318E90726071DF54B37208D52FA8AA6F099",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/evilmartians/lefthook/v2.1.0/lefthook_2.1.0_Windows_arm64.gz",
+      "checksum": "DE3038BE889AF63B2F8072AF808D628E5070669BFA66AA7688BB4EEBE03D4195",
+      "algorithm": "sha256"
+    },
+    {
+      "id": "github_release/github.com/evilmartians/lefthook/v2.1.0/lefthook_2.1.0_Windows_x86_64.gz",
+      "checksum": "4CA96D5CB30D07339770C6C97910B784E5E3C75524A1375DBF6BC5DBE51D72C3",
+      "algorithm": "sha256"
+    },
+    {
       "id": "github_release/github.com/rhysd/actionlint/v1.7.10/actionlint_1.7.10_darwin_amd64.tar.gz",
       "checksum": "16782C41F2AF264DB80F855EE5D09164CA98FC78EDF3BCD0F46EECFF279682BA",
       "algorithm": "sha256"
