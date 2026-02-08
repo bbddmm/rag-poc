@@ -9,16 +9,67 @@ description: PRテンプレートに沿ったPR作成。PRの作成やPRの説�
 
 ## 手順
 
-1. 変更内容を確認する
+### 1. 事前チェック
+
+ブランチ名が `feature/<機能名>` の命名規則に従っているか確認する。
+
+```bash
+git branch --show-current
+```
+
+命名規則に従っていない場合は `git branch -m feature/<適切な名前>` でリネームする。
+
+### 2. mainの最新を取り込む
+
+```bash
+git fetch origin
+git rebase origin/main
+```
+
+コンフリクトが発生した場合は自分で解消する。解消後 `git rebase --continue` で続行する。
+
+### 3. コミットログの確認・整理
+
+```bash
+git log --oneline origin/main..HEAD
+```
+
+以下を確認し、問題があれば `git rebase -i origin/main` で整理する。
+
+- **不要なマージコミットが含まれていないこと** — マージコミットがある場合は rebase で除去する
+- **レビュアーが読みやすい粒度であること** — 「fix typo」「wip」等の修正コミットは関連コミットにsquashする
+- **各コミットが論理的にまとまった変更であること** — 1コミットに無関係な変更が混在していないか確認する
+- **コミットメッセージが1行で簡潔に書かれていること** — 長すぎる場合はrewordで修正する
+
+### 4. リモートにpush
+
+```bash
+git push -u origin HEAD
+```
+
+### 5. 変更内容を確認する
 
 ```bash
 git log --oneline origin/main..HEAD
 git diff origin/main...HEAD
 ```
 
+### 6. PRテンプレートに沿ってPRを作成する
+
 1. PRテンプレート（`.github/pull_request_template.md`）を読み込む
 1. テンプレートの各セクションを埋める
+1. PRタイトルはConventional Commits形式で記述する（例: `feat: ユーザ認証機能の追加`）
 1. `gh pr create` でPRを作成する
+
+### 7. PR作成後の確認
+
+PR作成後、コンフリクトが発生していないか確認する。
+
+```bash
+gh pr view --json mergeStateStatus --jq '.mergeStateStatus'
+```
+
+`DIRTY` の場合はコンフリクトが発生している。`git fetch origin && git rebase origin/main` で解消し、force pushする。
 
 ## テンプレートの記述ガイド
 
@@ -46,7 +97,7 @@ git diff origin/main...HEAD
 ## PR作成コマンド例
 
 ```bash
-gh pr create --title "PRタイトル" --body "$(cat <<'EOF'
+gh pr create --title "feat: PRタイトル" --body "$(cat <<'EOF'
 ## 概要
 
 変更の概要をここに記述
