@@ -60,12 +60,12 @@ packages/
 
 ## 開発ツール
 
-| 項目               | 選定                                                             |
-| ------------------ | ---------------------------------------------------------------- |
+| 項目                 | 選定                                                           |
+| -------------------- | -------------------------------------------------------------- |
 | パッケージマネージャ | pnpm                                                           |
-| ランタイム管理     | mise, aqua                                                       |
-| Linter             | oxlint                                                           |
-| Formatter          | oxfmt                                                            |
-| 型チェック         | tsgo（デコレータ非対応のため、必要に応じてtscにフォールバック）   |
-| Git hooks          | lefthook                                                         |
-| CI/CD              | GitHub Actions                                                   |
+| ランタイム管理       | mise, aqua                                                     |
+| Linter               | oxlint                                                         |
+| Formatter            | oxfmt                                                          |
+| 型チェック           | tsgo（デコレータ非対応のため、必要に応じてtscにフォールバック） |
+| Git hooks            | lefthook                                                       |
+| CI/CD                | GitHub Actions                                                 |
