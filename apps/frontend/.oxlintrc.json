@@ -1,6 +1,17 @@
 {
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["import", "typescript", "unicorn", "oxc", "jsdoc", "vitest"],
+  "$schema": "../../node_modules/oxlint/configuration_schema.json",
+  "plugins": [
+    "import",
+    "typescript",
+    "unicorn",
+    "oxc",
+    "jsdoc",
+    "vitest",
+    "react",
+    "jsx-a11y",
+    "nextjs",
+    "react-perf"
+  ],
   "categories": {
     "correctness": "error",
     "suspicious": "error",
@@ -15,7 +26,6 @@
     "import/no-named-as-default": "error",
     "import/no-named-as-default-member": "error",
     "import/no-duplicates": "error",
-    // Named exportを許可（プロジェクト方針）
     "import/no-named-export": "off",
     "import/prefer-default-export": "off",
 
@@ -29,7 +39,6 @@
     "unicorn/prefer-node-protocol": "error",
     "unicorn/prefer-module": "error",
     "unicorn/no-array-for-each": "error",
-    // 以下はプロジェクト方針により無効化
     "unicorn/filename-case": "off",
     "unicorn/no-null": "off",
     "unicorn/prevent-abbreviations": "off",
@@ -37,15 +46,29 @@
     // ESLint core rules
     "no-console": "error",
     "no-debugger": "error",
-    // TypeScript環境では typescript/no-unused-vars を使用
-    "no-unused-vars": "off",
-    // TypeScript環境では型チェッカー（tsc/tsgo）に任せる
-    "no-undef": "off",
-    // import/no-duplicates の方が高機能なのでそちらを使用
-    "no-duplicate-imports": "off",
+    "no-unused-vars": "off", // Use typescript/no-unused-vars instead (handles TS types)
+    "no-undef": "off", // TypeScript compiler handles this better
+    "no-duplicate-imports": "off", // Use import/no-duplicates instead (more feature-rich)
     "eqeqeq": "error",
     "prefer-const": "error",
-    "no-magic-numbers": "off"
+    "no-magic-numbers": "off",
+
+    // React plugin rules
+    "react/jsx-key": "error",
+    "react/jsx-no-duplicate-props": "error",
+    "react/jsx-no-undef": "error",
+    "react/no-children-prop": "error",
+    "react/no-danger-with-children": "error",
+    "react/no-direct-mutation-state": "error",
+    "react/no-find-dom-node": "error",
+    "react/no-is-mounted": "error",
+    "react/no-render-return-value": "error",
+    "react/no-string-refs": "error",
+    "react/no-unescaped-entities": "error",
+    "react/no-unknown-property": "error",
+    "react/no-unsafe": "error",
+    "react/require-render-return": "error",
+    "react/void-dom-elements-no-children": "error"
   },
   "jsPlugins": [],
   "settings": {
@@ -61,11 +84,27 @@
     },
     "vitest": {
       "typecheck": false
+    },
+    "jsx-a11y": {
+      "polymorphicPropName": null,
+      "components": {},
+      "attributes": {}
+    },
+    "next": {
+      "rootDir": ["."]
+    },
+    "react": {
+      "formComponents": [],
+      "linkComponents": [],
+      "version": "19.0.0",
+      "componentWrapperFunctions": []
     }
   },
   "env": {
     "builtin": true,
-    "es2024": true
+    "es2024": true,
+    "browser": true,
+    "node": true
   },
   "globals": {},
   "ignorePatterns": [

@@ -1,6 +1,6 @@
 {
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["import", "typescript", "unicorn", "oxc", "jsdoc", "vitest"],
+  "$schema": "../../node_modules/oxlint/configuration_schema.json",
+  "plugins": ["import", "typescript", "unicorn", "oxc", "jsdoc", "vitest", "node", "promise"],
   "categories": {
     "correctness": "error",
     "suspicious": "error",
@@ -15,7 +15,6 @@
     "import/no-named-as-default": "error",
     "import/no-named-as-default-member": "error",
     "import/no-duplicates": "error",
-    // Named exportを許可（プロジェクト方針）
     "import/no-named-export": "off",
     "import/prefer-default-export": "off",
 
@@ -29,7 +28,6 @@
     "unicorn/prefer-node-protocol": "error",
     "unicorn/prefer-module": "error",
     "unicorn/no-array-for-each": "error",
-    // 以下はプロジェクト方針により無効化
     "unicorn/filename-case": "off",
     "unicorn/no-null": "off",
     "unicorn/prevent-abbreviations": "off",
@@ -37,15 +35,29 @@
     // ESLint core rules
     "no-console": "error",
     "no-debugger": "error",
-    // TypeScript環境では typescript/no-unused-vars を使用
-    "no-unused-vars": "off",
-    // TypeScript環境では型チェッカー（tsc/tsgo）に任せる
-    "no-undef": "off",
-    // import/no-duplicates の方が高機能なのでそちらを使用
-    "no-duplicate-imports": "off",
+    "no-unused-vars": "off", // Use typescript/no-unused-vars instead (handles TS types)
+    "no-undef": "off", // TypeScript compiler handles this better
+    "no-duplicate-imports": "off", // Use import/no-duplicates instead (more feature-rich)
     "eqeqeq": "error",
     "prefer-const": "error",
-    "no-magic-numbers": "off"
+    "no-magic-numbers": "off",
+
+    // Node.js plugin rules
+    "node/no-deprecated-api": "error",
+    "node/no-exports-assign": "error",
+
+    // Promise plugin rules
+    "promise/catch-or-return": "error",
+    "promise/no-return-wrap": "error",
+    "promise/param-names": "error",
+    "promise/always-return": "error",
+    "promise/no-nesting": "error",
+    "promise/no-promise-in-callback": "error",
+    "promise/no-callback-in-promise": "error",
+    "promise/avoid-new": "off",
+    "promise/no-new-statics": "error",
+    "promise/no-return-in-finally": "error",
+    "promise/valid-params": "error"
   },
   "jsPlugins": [],
   "settings": {
@@ -65,7 +77,8 @@
   },
   "env": {
     "builtin": true,
-    "es2024": true
+    "es2024": true,
+    "node": true
   },
   "globals": {},
   "ignorePatterns": [
