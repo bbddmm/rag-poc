@@ -6,12 +6,12 @@ checksum:
   enabled: true
   require_checksum: true
   supported_envs:
-  - all
+    - all
 registries:
-- type: standard
-  ref: v4.467.0 # renovate: depName=aquaproj/aqua-registry
+  - type: standard
+    ref: v4.467.0 # renovate: depName=aquaproj/aqua-registry
 packages:
-- name: rhysd/actionlint@v1.7.10
-- name: suzuki-shunsuke/ghalint@v1.5.5
-- name: suzuki-shunsuke/pinact@v3.9.0
-- name: evilmartians/lefthook@v2.1.0
+  - name: rhysd/actionlint@v1.7.10
+  - name: suzuki-shunsuke/ghalint@v1.5.5
+  - name: suzuki-shunsuke/pinact@v3.9.0
+  - name: evilmartians/lefthook@v2.1.0
