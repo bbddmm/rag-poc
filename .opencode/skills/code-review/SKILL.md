@@ -13,9 +13,20 @@ PRの変更内容をレビューし、品質・安全性・保守性の観点か
 
 コミット単位でレビューする。まずコミット一覧を確認し、各コミットの変更を順に見る。
 
+**PR番号が指定された場合:**
+
 ```bash
 gh pr view <PR番号> --json commits --jq '.commits[] | "\(.oid[:7]) \(.messageHeadline)"'
 gh pr diff <PR番号>
+```
+
+**PR番号が未指定の場合（セルフレビュー等）:**
+
+`origin/main` との差分をレビュー対象とする。
+
+```bash
+git log --oneline origin/main..HEAD
+git diff origin/main
 ```
 
 ### 2. 共通観点でレビュー

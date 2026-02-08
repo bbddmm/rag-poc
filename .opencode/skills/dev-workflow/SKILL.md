@@ -46,6 +46,16 @@ git rebase origin/main
 git rebase -i origin/main
 ```
 
+1. `/code-review` でセルフレビューを実施する（PR番号未指定で実行）
+
+1. セルフレビューで指摘があれば修正し、コミットを再整理する
+
+```bash
+git add <修正ファイル>
+git commit -m "fix: レビュー指摘の修正内容"
+git rebase -i origin/main  # 修正コミットを元のコミットにsquashする
+```
+
 1. リモートにプッシュする
 
 ```bash
