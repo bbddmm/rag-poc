@@ -1,11 +1,27 @@
 {
   "recommendations": [
-    "oxc.oxc-vscode",
-    "editorconfig.editorconfig",
+    "bradlc.vscode-tailwindcss",
+    "christian-kohler.path-intellisense",
     "DavidAnson.vscode-markdownlint",
-    "ms-azuretools.vscode-docker",
     "eamodio.gitlens",
-    "GitHub.copilot",
-    "GitHub.copilot-chat"
+    "editorconfig.editorconfig",
+    "exiasr.hadolint",
+    "GitHub.copilot-chat",
+    "GitHub.vscode-github-actions",
+    "joshbolduc.story-explorer",
+    "mikestead.dotenv",
+    "ms-azuretools.vscode-docker",
+    "naumovs.color-highlight",
+    "nicewise.vibe-kanban",
+    "openai.chatgpt",
+    "opencodehq.opencode",
+    "oxc.oxc-vscode",
+    "redhat.vscode-yaml",
+    "shardulm94.trailing-spaces",
+    "streetsidesoftware.code-spell-checker",
+    "tamasfe.even-better-toml",
+    "vitest.explorer",
+    "wayou.vscode-todo-highlight",
+    "wix.vscode-import-cost"
   ]
 }
