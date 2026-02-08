@@ -25,6 +25,12 @@ git switch -c feature/<機能名>
 - ブランチ名は `feature/機能名` とする
 - 機能名は英語のケバブケースで記述する（例: `feature/add-user-auth`）
 
+1. 依存パッケージをインストールする
+
+```bash
+pnpm install --frozen-lockfile
+```
+
 ## 作業中
 
 - こまめにコミットする
