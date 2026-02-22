@@ -1,0 +1,54 @@
+{
+  "$schema": "../../node_modules/oxlint/configuration_schema.json",
+  "extends": ["../../configs/oxlint-base.json"],
+  "plugins": [
+    "import",
+    "typescript",
+    "unicorn",
+    "oxc",
+    "jsdoc",
+    "vitest",
+    "react",
+    "jsx-a11y",
+    "nextjs",
+    "react-perf"
+  ],
+  "rules": {
+    // React plugin rules (frontend-specific)
+    "react/jsx-key": "error",
+    "react/jsx-no-duplicate-props": "error",
+    "react/jsx-no-undef": "error",
+    "react/no-children-prop": "error",
+    "react/no-danger-with-children": "error",
+    "react/no-direct-mutation-state": "error",
+    "react/no-find-dom-node": "error",
+    "react/no-is-mounted": "error",
+    "react/no-render-return-value": "error",
+    "react/no-string-refs": "error",
+    "react/no-unescaped-entities": "error",
+    "react/no-unknown-property": "error",
+    "react/no-unsafe": "error",
+    "react/require-render-return": "error",
+    "react/void-dom-elements-no-children": "error"
+  },
+  "settings": {
+    "jsx-a11y": {
+      "polymorphicPropName": null,
+      "components": {},
+      "attributes": {}
+    },
+    "next": {
+      "rootDir": ["."]
+    },
+    "react": {
+      "formComponents": [],
+      "linkComponents": [],
+      "version": "19.0.0",
+      "componentWrapperFunctions": []
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true
+  }
+}

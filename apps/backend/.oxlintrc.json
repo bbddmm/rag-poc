@@ -1,0 +1,26 @@
+{
+  "$schema": "../../node_modules/oxlint/configuration_schema.json",
+  "extends": ["../../configs/oxlint-base.json"],
+  "plugins": ["import", "typescript", "unicorn", "oxc", "jsdoc", "vitest", "node", "promise"],
+  "rules": {
+    // Node.js plugin rules (backend-specific)
+    "node/no-deprecated-api": "error",
+    "node/no-exports-assign": "error",
+
+    // Promise plugin rules (backend-specific)
+    "promise/catch-or-return": "error",
+    "promise/no-return-wrap": "error",
+    "promise/param-names": "error",
+    "promise/always-return": "error",
+    "promise/no-nesting": "error",
+    "promise/no-promise-in-callback": "error",
+    "promise/no-callback-in-promise": "error",
+    "promise/avoid-new": "off",
+    "promise/no-new-statics": "error",
+    "promise/no-return-in-finally": "error",
+    "promise/valid-params": "error"
+  },
+  "env": {
+    "node": true
+  }
+}
